@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Chess</title>
         <meta charset="UTF-8">
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" >
         <script src="script.js" defer></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
+            <!-- Top header of the page -->
             <nav id="top-header">
+                <!-- Chess Icon that acts as an anchor -->
                 <button onclick="GoToHome()" class="chess-icon" id="chess-logo-div">
                     <svg>
-                        <g id="SVGRepo_iconCarrier">
+                        <g>
                             <g>
                                 <g>
                                     <path d="M52.224,53h-0.556c0.344-0.591,0.556-1.268,0.556-2c0-1.489-0.828-2.776-2.038-3.465L48.319,27h0.405 c1.93,0,3.5-1.57,3.5-3.5c0-1.182-0.593-2.225-1.494-2.859c0.31-0.472,0.494-1.035,0.494-1.641c0-0.432-0.095-0.84-0.26-1.211 L56.776,5h-6.119l-3,5h-2.214l1-5h-8.439l1,5H36.79l-3-5h-6.119l5.813,12.789c-0.165,0.371-0.26,0.78-0.26,1.211 c0,0.606,0.184,1.168,0.494,1.641c-0.901,0.634-1.494,1.677-1.494,2.859c0,1.93,1.57,3.5,3.5,3.5h0.405l-1.867,20.535 c-1.211,0.688-2.038,1.975-2.038,3.465c0,0.732,0.212,1.409,0.556,2h-0.556c-1.654,0-3,1.346-3,3s1.346,3,3,3h20 c1.654,0,3-1.346,3-3S53.878,53,52.224,53z M36.224,18h12c0.552,0,1,0.449,1,1s-0.448,1-1,1h-12c-0.552,0-1-0.449-1-1 S35.672,18,36.224,18z M32.657,7l2.555,4.257C35.487,11.715,35.991,12,36.525,12h3.048c0.462,0,0.894-0.205,1.187-0.562 c0.292-0.357,0.407-0.821,0.316-1.272L40.443,7h3.561l-0.633,3.165c-0.091,0.453,0.024,0.917,0.316,1.273 C43.98,11.795,44.412,12,44.874,12h3.048c0.534,0,1.038-0.285,1.314-0.744L51.79,7h1.881l-4.091,9h-1.356h-12h-1.356l-4.091-9 H32.657z M35.724,25c-0.827,0-1.5-0.673-1.5-1.5s0.673-1.5,1.5-1.5h0.5h12h0.5c0.827,0,1.5,0.673,1.5,1.5s-0.673,1.5-1.5,1.5 h-0.587H36.311H35.724z M46.311,27l1.818,20H36.318l1.818-20H46.311z M34.224,51c0-1.103,0.897-2,2-2h12c1.103,0,2,0.897,2,2 s-0.897,2-2,2h-12C35.121,53,34.224,52.103,34.224,51z M52.224,57h-20c-0.552,0-1-0.449-1-1s0.448-1,1-1h4h12h4 c0.552,0,1,0.449,1,1S52.775,57,52.224,57z"></path> <path d="M25.224,53h-0.556c0.344-0.591,0.556-1.268,0.556-2c0-1.489-0.828-2.776-2.038-3.465L21.319,27h0.405 c1.93,0,3.5-1.57,3.5-3.5c0-1.679-1.19-3.084-2.771-3.421l1.345-6.05c0.164-0.741-0.015-1.505-0.489-2.097 C22.833,11.339,22.125,11,21.366,11h-2.143v-1h0.628c1.308,0,2.372-1.064,2.372-2.373V5.373C22.224,4.064,21.159,3,19.852,3 h-0.628V2.373C19.224,1.064,18.159,0,16.852,0h-3.256c-1.308,0-2.372,1.064-2.372,2.373V3h-0.628C9.288,3,8.224,4.064,8.224,5.373 v2.255C8.224,8.936,9.288,10,10.596,10h0.628v1H9.081c-0.759,0-1.467,0.339-1.942,0.932c-0.475,0.592-0.653,1.356-0.489,2.098 l1.345,6.05c-1.581,0.337-2.771,1.742-2.771,3.421c0,1.93,1.57,3.5,3.5,3.5h0.405L7.262,47.535 C6.051,48.224,5.224,49.511,5.224,51c0,0.732,0.212,1.409,0.556,2H5.224c-1.654,0-3,1.346-3,3s1.346,3,3,3h20c1.654,0,3-1.346,3-3 S26.878,53,25.224,53z M10.228,37h9.992l0.182,2H10.046L10.228,37z M9.864,41h10.719l0.546,6H9.318L9.864,41z M10.596,8 c-0.205,0-0.372-0.167-0.372-0.373V5.373C10.224,5.167,10.391,5,10.596,5h2.628V2.373C13.224,2.167,13.391,2,13.596,2h3.256 c0.205,0,0.372,0.167,0.372,0.373V5h2.628c0.205,0,0.372,0.167,0.372,0.373v2.255C20.224,7.833,20.057,8,19.852,8h-2.628v3h-4V8 H10.596z M8.698,13.184C8.754,13.115,8.876,13,9.081,13h2.143h8h2.143c0.205,0,0.327,0.115,0.383,0.184 c0.055,0.068,0.141,0.213,0.096,0.412L20.422,20H10.025l-1.423-6.404C8.558,13.396,8.644,13.252,8.698,13.184z M8.724,25 c-0.827,0-1.5-0.673-1.5-1.5s0.673-1.5,1.5-1.5h13c0.827,0,1.5,0.673,1.5,1.5s-0.673,1.5-1.5,1.5h-0.587H9.311H8.724z M19.311,27 l0.727,8H10.41l0.727-8H19.311z M7.224,51c0-1.103,0.897-2,2-2h12c1.103,0,2,0.897,2,2s-0.897,2-2,2h-12 C8.121,53,7.224,52.103,7.224,51z M25.224,57h-20c-0.552,0-1-0.449-1-1s0.448-1,1-1h4h12h4c0.552,0,1,0.449,1,1 S25.775,57,25.224,57z"></path>
@@ -20,16 +23,40 @@
                         </g>
                     </svg>
                 </button>
+                <!-- Nav text buttons -->
                 <button class="text-button" onclick="GoToRules()">Rules</button>
                 <button class="text-button" onclick="GoToHistory()">History</button>
                 <button class="text-button" onclick="GoToOpenings()">Openings</button>
+
+                <!-- Hamburger icon that opens when mobile -->
                 <button id="hamburger-menu" onclick="OnHamburgerMenuClick()">
-                    <svg viewBox="0 0 24 24" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="#ECEFF4" stroke-width="2" stroke-linecap="round"></path> <path d="M4 12L20 12" stroke="#ECEFF4" stroke-width="2" stroke-linecap="round"></path> <path d="M4 6L20 6" stroke="#ECEFF4" stroke-width="2" stroke-linecap="round"></path> </g></svg>
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <g stroke-width="0"></g>
+                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g> 
+                        <path d="M4 18L20 18" stroke="#ECEFF4" stroke-width="2" stroke-linecap="round">
+                        </path> 
+                        <path d="M4 12L20 12" stroke="#ECEFF4" stroke-width="2" stroke-linecap="round">
+                        </path> 
+                        <path d="M4 6L20 6" stroke="#ECEFF4" stroke-width="2" stroke-linecap="round"></path> 
+                        </g>
+                    </svg>
                 </button>
+
+                <!-- Hamburger icon that opens when clicked -->
                 <nav id="hamburger-nav-menu">
+                    <!-- Close button -->
                     <button id="close-hamburger-menu" onclick="OnHamburgerMenuClick()">
-                        <svg fill="#ffffff" version="1.1" viewBox="0 0 220.496 220.496" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M0.003,192.658c0,7.434,2.897,14.424,8.154,19.684c5.257,5.261,12.25,8.154,19.684,8.154 c7.44,0,14.429-2.894,19.674-8.154l62.732-62.731l62.717,62.72c5.255,5.26,12.244,8.154,19.684,8.154 c7.44,0,14.436-2.895,19.678-8.154c5.255-5.26,8.155-12.25,8.155-19.684s-2.9-14.424-8.155-19.684l-62.714-62.717l62.727-62.727 c5.254-5.257,8.154-12.247,8.154-19.681c0-7.434-2.9-14.427-8.154-19.684C207.084,2.897,200.095,0,192.655,0 c-7.435,0-14.424,2.897-19.678,8.155l-62.724,62.732L47.522,8.155C42.271,2.897,35.281,0,27.847,0 c-7.44,0-14.433,2.897-19.684,8.155c-5.257,5.257-8.155,12.25-8.155,19.684c0,7.434,2.897,14.423,8.155,19.681l62.732,62.727 L8.157,172.974C2.9,178.234,0.003,185.224,0.003,192.658z M16.858,181.681l67.08-67.086c1.156-1.152,1.801-2.714,1.801-4.344 c0-1.631-0.646-3.198-1.801-4.348l-67.08-67.08c-2.939-2.936-4.552-6.836-4.552-10.985c0-4.152,1.618-8.056,4.552-10.989 c2.939-2.933,6.831-4.552,10.989-4.552c4.149,0,8.055,1.619,10.98,4.552l67.079,67.077c2.306,2.306,6.39,2.306,8.695,0 l67.07-67.077c5.867-5.873,16.104-5.861,21.972,0c2.937,2.939,4.552,6.836,4.552,10.989c0,4.149-1.615,8.056-4.552,10.985 l-67.073,67.074c-2.402,2.404-2.402,6.29,0,8.697l67.062,67.056c2.936,2.937,4.545,6.84,4.545,10.989s-1.609,8.053-4.551,10.988 c-5.85,5.867-16.094,5.873-21.966,0l-67.059-67.056c-2.405-2.407-6.29-2.407-8.695,0l-67.085,67.08 c-5.846,5.866-16.09,5.872-21.962,0c-2.939-2.937-4.552-6.84-4.552-10.989C12.307,188.515,13.919,184.612,16.858,181.681z"></path> </g> </g> </g></svg>
+                        <svg fill="#ffffff" version="1.1" viewBox="0 0 220.496 220.496" stroke="#ffffff">
+                            <g stroke-width="0"></g>
+                            <g stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g > <g> <g> 
+                                <path d="M0.003,192.658c0,7.434,2.897,14.424,8.154,19.684c5.257,5.261,12.25,8.154,19.684,8.154 c7.44,0,14.429-2.894,19.674-8.154l62.732-62.731l62.717,62.72c5.255,5.26,12.244,8.154,19.684,8.154 c7.44,0,14.436-2.895,19.678-8.154c5.255-5.26,8.155-12.25,8.155-19.684s-2.9-14.424-8.155-19.684l-62.714-62.717l62.727-62.727 c5.254-5.257,8.154-12.247,8.154-19.681c0-7.434-2.9-14.427-8.154-19.684C207.084,2.897,200.095,0,192.655,0 c-7.435,0-14.424,2.897-19.678,8.155l-62.724,62.732L47.522,8.155C42.271,2.897,35.281,0,27.847,0 c-7.44,0-14.433,2.897-19.684,8.155c-5.257,5.257-8.155,12.25-8.155,19.684c0,7.434,2.897,14.423,8.155,19.681l62.732,62.727 L8.157,172.974C2.9,178.234,0.003,185.224,0.003,192.658z M16.858,181.681l67.08-67.086c1.156-1.152,1.801-2.714,1.801-4.344 c0-1.631-0.646-3.198-1.801-4.348l-67.08-67.08c-2.939-2.936-4.552-6.836-4.552-10.985c0-4.152,1.618-8.056,4.552-10.989 c2.939-2.933,6.831-4.552,10.989-4.552c4.149,0,8.055,1.619,10.98,4.552l67.079,67.077c2.306,2.306,6.39,2.306,8.695,0 l67.07-67.077c5.867-5.873,16.104-5.861,21.972,0c2.937,2.939,4.552,6.836,4.552,10.989c0,4.149-1.615,8.056-4.552,10.985 l-67.073,67.074c-2.402,2.404-2.402,6.29,0,8.697l67.062,67.056c2.936,2.937,4.545,6.84,4.545,10.989s-1.609,8.053-4.551,10.988 c-5.85,5.867-16.094,5.873-21.966,0l-67.059-67.056c-2.405-2.407-6.29-2.407-8.695,0l-67.085,67.08 c-5.846,5.866-16.09,5.872-21.962,0c-2.939-2.937-4.552-6.84-4.552-10.989C12.307,188.515,13.919,184.612,16.858,181.681z">
+                                </path> 
+                            </g> </g> </g>
+                        </svg>
                     </button>
+                    <!-- Navigation text buttons -->
                     <button class="hamburger-nav-button" onclick="GoToHome()">Home</button>
                     <button class="hamburger-nav-button" onclick="GoToRules()">Rules</button>
                     <button class="hamburger-nav-button" onclick="GoToHistory()">History</button>
@@ -38,7 +65,11 @@
             </nav>     
         </header>
         <div id="all-bodies">
+            <!-- NOTE - Class 'reveal-on-scroll' makes it such that on desktop, they fade in when scrolled unto -->
+            <!-- NOTE - For all the bodies, they have this 'fade' wrapper which will allow for the transition -->
+            <!-- on the desktop version of the site when changing. -->
             <div class="fade-wrapper active">
+                <!-- About chess body -->
                 <div id="about-body" class="about-body">
                     <section id="about-title">
                         <h1 id="about-title-header">
@@ -47,6 +78,7 @@
                         <h4 id="about-subtitle-header">
                             The board game of all time. 
                         </h4>
+                        <!-- Small nav block -->
                         <div id="about-body-nav">
                             <div>
                                 <button class="about-nav bold-spaced-out nord8" onclick="GoToRules()">Getting started with Chess</button>
@@ -62,32 +94,35 @@
                         </div>
 
                     </section>
+                    <!-- Chess introduction -->
                     <section id="chess-introduction">
                         <div>
                             <div id="chess-scroll-animation-1">
                                 <div id="chess-scroll-animation-1-black-piece" class="reveal-on-scroll tilt-left"></div>
                                 <div id="chess-scroll-animation-1-white-piece" class="reveal-on-scroll tilt-right"></div>
                             </div>
-                            <p class="reveal-on-scroll">
+                            <h4 class="reveal-on-scroll fix-h4">
                                 Chess is one of the oldest and most popular board game. It is played by two opponents on a checkered board with specially designed pieces of contrasting colours, traditionally white and black. The objective of the game is to capture the opponent's king.
-                            </p>
+                            </h4>
 
                         </div>
                     </section>
 
                     <section id="chess-media-introduction">
-                        <img rel="preload" class="reveal-on-scroll" src="images/carlsenvsniemann.jpg">
-                        <p class="reveal-on-scroll">
+                        <!-- Chess media introduction -->
+                        <img alt="Magnus vs Niemann" rel="preload" class="reveal-on-scroll" src="images/carlsenvsniemann.jpg">
+                        <h4 class="reveal-on-scroll fix-h4">
                             Chess requires intense concentration, strategic thinking, and problem-solving skills. It also involves physical stamina, as players can spend hours sitting at the board, analyzing moves and making decisions. All these factors contribute to the board game evolving into a competitive sport.
-                        </p>
+                        </h4>
                     </section>
 
                     <section id="chess-why-introduction">
+                        <!-- why should you play chess introduction -->
                         <div>
-                            <img rel="preload" class="reveal-on-scroll" src="images/chessstockimage.jpeg">
-                            <p class="reveal-on-scroll">
+                            <img alt="Stock chess image" rel="preload" class="reveal-on-scroll" src="images/chessstockimage.jpeg">
+                            <h4 class="reveal-on-scroll fix-h4">
                                 The game of chess has evolved as it spread around the globe to the game we play today. As a result, this journey has brought people together from different cultures, ages, and backgrounds over a common bond and passion for the game. You should play now!
-                            </p>
+                            </h4>
 
                         </div>
                     </section>
@@ -98,22 +133,25 @@
             </div>
 
             <div class="fade-wrapper">
+                <!-- Rules of chess -->
                 <div id="rules-body">
                     <section id="piece-section">
-                        <h1 id="basic-piece-movement-header">
+                        <!-- Basic explanation of pieces -->
+                        <h2 id="basic-piece-movement-header">
                             Basic Piece Movement
-                        </h1>
+                        </h2>
                         <h1 id="piece-section-header">
                             King 
                         </h1>
+                        <!-- Selector of pieces -->
                         <div id="piece-select">
                             <button id="cycle-left-piece" onclick="SelectPieceOnLeft()">
-                                <svg id="return-to-top" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394 l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393 C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"></path> </g></svg>
+                                <svg class="return-to-top" height="200px" width="200px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g > <path d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394 l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393 C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"></path> </g></svg>
                             </button>
                             <!-- King SVG -->
                             <svg class="chess-piece" id="piece-section-king-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="45" height="45">
                                 <g style="fill:none; fill-opacity:1; fill-rule:evenodd; stroke:#ECEFF4; stroke-width:1.5; stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4; stroke-dasharray:none; stroke-opacity:1;">
-                                    <path d="M 22.5,11.63 L 22.5,6" style="fill:none; stroke:#ECEFF4; stroke-linejoin:miter;" id="path6570"/>
+                                    <path d="M 22.5,11.63 L 22.5,6" style="fill:none; stroke:#ECEFF4; stroke-linejoin:miter;" />
                                     <path d="M 22.5,25 C 22.5,25 27,17.5 25.5,14.5 C 25.5,14.5 24.5,12 22.5,12 C 20.5,12 19.5,14.5 19.5,14.5 C 18,17.5 22.5,25 22.5,25" style="fill:#ECEFF400;fill-opacity:1; stroke-linecap:butt; stroke-linejoin:miter;"/>
                                     <path d="M 12.5,37 C 18,40.5 27,40.5 32.5,37 L 32.5,30 C 32.5,30 41.5,25.5 38.5,19.5 C 34.5,13 25,16 22.5,23.5 L 22.5,27 L 22.5,23.5 C 20,16 10.5,13 6.5,19.5 C 3.5,25.5 12.5,30 12.5,30 L 12.5,37" style="fill:#ECEFF400; stroke:#ECEFF4;"/>
                                     <path d="M 20,8 L 25,8" style="fill:none; stroke:#ECEFF4; stroke-linejoin:miter;"/>
@@ -221,20 +259,25 @@
                                 <path d="m 22.5,9 c -2.21,0 -4,1.79 -4,4 0,0.89 0.29,1.71 0.78,2.38 C 17.33,16.5 16,18.59 16,21 c 0,2.03 0.94,3.84 2.41,5.03 C 15.41,27.09 11,31.58 11,39.5 H 34 C 34,31.58 29.59,27.09 26.59,26.03 28.06,24.84 29,23.03 29,21 29,18.59 27.67,16.5 25.72,15.38 26.21,14.71 26.5,13.89 26.5,13 c 0,-2.21 -1.79,-4 -4,-4 z" style="opacity:1; fill:#000000; fill-opacity:0; fill-rule:nonzero; stroke:#ECEFF4; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:miter; stroke-miterlimit:4; stroke-dasharray:none; stroke-opacity:1;"/>
                             </svg>
                             <button id="cycle-right-piece" onclick="SelectPieceOnRight()">
-                                <svg id="return-to-top" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394 l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393 C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"></path> </g></svg>
+                                <svg class="return-to-top" height="200px" width="200px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g > <path d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394 l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393 C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"></path> </g></svg>
                             </button>
                         </div>
+                        <!-- Dynamic description -->
                         <p id="piece-description">
                             The king can only move 1 step in all directions.  
                         </p>
 
-                        <iframe class="piece-video" id="king-video" src="https://www.youtube.com/embed/ZWjDKiHBvZo" title="How to Move the Chess Pieces: The King and the Goal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
-                        <iframe class="piece-video" id="queen-video" src="https://www.youtube.com/embed/vwgwI0wnULU" title="The Queen | How to Move the Chess Pieces" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <iframe class="piece-video" id="rook-video" src="https://www.youtube.com/embed/PlgnoYqsK-8" title="The Rook | How to Move the Chess Pieces #shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <iframe class="piece-video" id="bishop-video" src="https://www.youtube.com/embed/_y3eA21rD1w" title="The Bishop | How to Move the Chess Pieces" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <iframe class="piece-video" id="knight-video"src="https://www.youtube.com/embed/VGoT8FR0O_8" title="The Knight | How to Move the Chess Pieces" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <iframe class="piece-video" id="pawn-video" src="https://www.youtube.com/embed/00uUlbcPz5E" title="The Pawn | How to Move the Chess Pieces" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <!-- Videos for mobile -->
+                        <iframe class="piece-video" id="king-video" src="https://www.youtube.com/embed/ZWjDKiHBvZo" title="How to Move the Chess Pieces: The King and the Goal" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+                        <iframe class="piece-video" id="queen-video" src="https://www.youtube.com/embed/vwgwI0wnULU" title="The Queen | How to Move the Chess Pieces" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="piece-video" id="rook-video" src="https://www.youtube.com/embed/PlgnoYqsK-8" title="The Rook | How to Move the Chess Pieces #shorts" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="piece-video" id="bishop-video" src="https://www.youtube.com/embed/_y3eA21rD1w" title="The Bishop | How to Move the Chess Pieces" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="piece-video" id="knight-video" src="https://www.youtube.com/embed/VGoT8FR0O_8" title="The Knight | How to Move the Chess Pieces" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="piece-video" id="pawn-video" src="https://www.youtube.com/embed/00uUlbcPz5E" title="The Pawn | How to Move the Chess Pieces"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+                        <!-- Interactive 'dynamic' chessboard -->
+                        <!-- Each table element has a button for the indicator when the piece is able to move there. -->
+                        <!-- The movement is coded using Javascript -->
                         <table class="chess-board">
                             <tbody>
                                 <tr>
@@ -417,7 +460,7 @@
                                         <button class="44 chess-board-piece chess-board-king" onclick="OnKingClick(this)">
                                             <svg width="45" height="45">
                                                 <g style="fill:none; fill-opacity:1; fill-rule:evenodd; stroke:#ECEFF4; stroke-width:1.5; stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4; stroke-dasharray:none; stroke-opacity:1;">
-                                                    <path d="M 22.5,11.63 L 22.5,6" style="fill:none; stroke:#ECEFF4; stroke-linejoin:miter;" id="path6570"/>
+                                                    <path d="M 22.5,11.63 L 22.5,6" style="fill:none; stroke:#ECEFF4; stroke-linejoin:miter;" />
                                                     <path d="M 22.5,25 C 22.5,25 27,17.5 25.5,14.5 C 25.5,14.5 24.5,12 22.5,12 C 20.5,12 19.5,14.5 19.5,14.5 C 18,17.5 22.5,25 22.5,25" style="fill:#ECEFF400;fill-opacity:1; stroke-linecap:butt; stroke-linejoin:miter;"/>
                                                     <path d="M 12.5,37 C 18,40.5 27,40.5 32.5,37 L 32.5,30 C 32.5,30 41.5,25.5 38.5,19.5 C 34.5,13 25,16 22.5,23.5 L 22.5,27 L 22.5,23.5 C 20,16 10.5,13 6.5,19.5 C 3.5,25.5 12.5,30 12.5,30 L 12.5,37" style="fill:#ECEFF400; stroke:#ECEFF4;"/>
                                                     <path d="M 20,8 L 25,8" style="fill:none; stroke:#ECEFF4; stroke-linejoin:miter;"/>
@@ -487,21 +530,22 @@
             </div>
 
             <div class="fade-wrapper">
+                <!-- History of chess -->
                 <div id="history-page" class="">
                     <section id="chess-origins">
                         <div>
-                            <p>
+                            <h4 class="fix-h4">
                                 Chess, as we know it today, was born out of the Indian game chaturanga before the 600s AD. The game spread throughout Asia and Europe over the coming centuries, and eventually evolved into what we know as chess around the 16th century. One of the first masters of the game was a Spanish priest named Ruy Lopez. Although he didn't invent the opening named after him, he analyzed it in a book he published in 1561. 
-                            </p>
-                            <img rel="preload" src="images/chaturanga.jpg">
+                            </h4>
+                            <img alt="Chaturanga" rel="preload" src="images/chaturanga.jpg">
                         </div>
                     </section>
                     <section id="chess-origins-2">
                         <div class="reveal-on-scroll">
-                            <p>
+                            <h4 class="fix-h4">
                                 Since at least the 15th century, chess has been known as the “royal game” because of its popularity among the nobility. Rules and set design slowly evolved until both reached today’s standard in the early 19th century. Once an intellectual diversion favoured by the upper classes, chess went through an explosive growth in interest during the 20th century as professional and state-sponsored players competed for an officially recognized world championship title and increasingly lucrative tournament prizes. Organized chess tournaments, postal correspondence games, and Internet chess now attract men, women, and children around the world.
-                            </p>
-                            <img rel="preload" src="images/chessstockimage2.png">
+                            </h4>
+                            <img alt="Another stock chess image" rel="preload" src="images/chessstockimage2.png">
                         </div>
                     </section>
 
@@ -509,6 +553,7 @@
             </div>
 
             <div class="fade-wrapper">
+                <!-- basic openings in chess -->
                 <div id="openings-page" class="">
                     <section class="opening">
                         <div>
@@ -521,7 +566,7 @@
                                     The Italian game begins with 1. e4 e5 2. Nf3 Nc6 3. Bc4. The point is to control the center quickly with your pawn and knight and then put your bishop on its most dangerous square. You are also preparing to castle to safety.
                                 </p>
                             </div>
-                            <img rel="preload" src="images/italiangameopening.png">
+                            <img alt="Italian game" rel="preload" src="images/italiangameopening.png">
                         </div>
                     </section>
                     <section class="opening brighter">
@@ -534,7 +579,7 @@
                                     The Sicilian Defense is the most popular choice of aggressive players with the black pieces. Often White will play 2.Nf3 and 3.d4 which will gain central space, but it allows Black to benefit by exchanging a central pawn for a bishop's pawn.
                                 </p>
                             </div>
-                            <img class="reveal-on-scroll" rel="preload" src="images/siciliandefenseopening.png">
+                            <img alt="Sicilian Defense" class="reveal-on-scroll" rel="preload" src="images/siciliandefenseopening.png">
                         </div>
                     </section>
                     <section class="opening">
@@ -548,15 +593,17 @@
                                     The French Defense is one of the first strategic openings every chess player should learn. After e5 (now or later), both sides will have pawn chains. One risk of the French Defense is that the c8-bishop can be very hard to develop.
                                 </p>
                             </div>
-                            <img class="reveal-on-scroll" rel="preload" src="images/italiangameopening.png">
+                            <img alt="French Defense" class="reveal-on-scroll" rel="preload" src="images/italiangameopening.png">
                         </div>
                     </section>
+                    <!-- Openings quiz -->
                     <section class="brighter" id="quiz-section">
                         <div>
                             <h1>
                                 Quiz
                             </h1>
-                            <img class="reveal-on-scroll" rel="preload" src="images/siciliandefenseopening.png">
+                            <img alt="Quiz image" class="reveal-on-scroll" rel="preload" src="images/siciliandefenseopening.png">
+                            <!-- Hack to make form submission not go to the top of the page. -->
                             <form onsubmit="GetResults(); return false">
                                 <h2>What is the name of this opening?</h2>
                                 <fieldset>
@@ -569,6 +616,7 @@
                                 </fieldset>
                                 <button type="submit">Submit</button>
                             </form>
+                            <!-- Result of the quiz. -->
                             <div id="quiz-result">
                             </div>
                         </div>
@@ -578,9 +626,10 @@
         </div>
 
         <footer>
+            <!-- Helper to return to the top of the page. -->
             <div id="return-to-top-container">
                 <a href="#top-header">
-                    <svg id="return-to-top" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394 l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393 C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"></path> </g></svg>
+                    <svg class="return-to-top" height="200px" width="200px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g > <path d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394 l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393 C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"></path> </g></svg>
                 </a>
             </div>
             <br>
@@ -588,6 +637,7 @@
             <nav id="footer-nav">
                 <div class="bold-spaced-out" id="footer-nav-social">
                     social 
+                    <!-- External github link. -->
                     <div id="github-icon">
                         <a href="https://github.com/esuriru" title="Github link" class="github-button" target="_blank">
                             <svg aria-hidden="true" height="36" version="1.1" viewBox="0 0 16 16" width="36">

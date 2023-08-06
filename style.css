@@ -21,7 +21,6 @@
 
 section {
     min-height: 100vh;
-    min-width: none;
 }
 
 /* Setting default background colour and foreground colour and setting default font to inconsolata */
@@ -35,16 +34,24 @@ body {
 }
 
 footer {
+    /* Center things */
     margin: auto;
     max-width: 1024px;
 }
 
 html {
+    /* Make scrolling from anchors smooth */
     scroll-behavior: smooth;
 }
 
 button {
+    /* Have pointer cursor on button hovers */
     cursor: pointer;
+}
+
+iframe {
+    /* Remove video borders */
+    border: none;
 }
 
 label {
@@ -60,17 +67,18 @@ header {
 }
 
 fieldset {
+    /* Remove fieldset borders */
     border: 0;
 }
 
-
+/* Set values of chess logo */
 #chess-logo-div > svg {
     height: 59px;
     width: 59px;
-    viewport-fit: 0 0 59 59;
     fill: var(--foreground);
 }
 
+/* Top header flex box */
 #top-header {
     display: flex;
     justify-content: flex-end;
@@ -78,6 +86,7 @@ fieldset {
     overflow: hidden;
 }
 
+/* Text buttons of the top header */
 #top-header .text-button {
     background-color: transparent;
     border: none;
@@ -89,6 +98,7 @@ fieldset {
     font-family: "Inconsolata";
 }
 
+/* In default desktop, don't show the menu and its contents */
 #hamburger-menu {
     display: none;
 }
@@ -101,6 +111,8 @@ fieldset {
     display: none;
     height: 100vh;
     background-color: var(--nord3);
+
+    /* Make sure the menu is over everything else */
     z-index: 1;
 }
 
@@ -123,6 +135,7 @@ fieldset {
     margin-bottom: 25px;
 }
 
+/* Enable hover only when desktop */
 @media only screen and (min-width: 801px)
 {
     #top-header .text-button:hover {
@@ -130,7 +143,7 @@ fieldset {
     }
 }
 
-
+/* Enable hamburger menu on mobile, and turn off default text buttons */
 @media only screen and (max-width: 800px)
 {
     #top-header .text-button {
@@ -166,6 +179,7 @@ fieldset {
     color: var(--nord8);
 }
 
+/* Makes the logo sit on the left */
 #chess-logo-div {
     justify-self: flex-start;
     margin-right: auto;
@@ -176,7 +190,12 @@ fieldset {
 
 /* Helper classes to help the sliding in of new page */
 
+/* Class to fix the warning */
+.fix-h4 {
+    font-weight: normal;
+}
 
+/* Cheat way to scroll down scale of a div using grid */
 .fade-wrapper {
     display: grid;
     grid-template-rows: 0fr;
@@ -188,6 +207,7 @@ fieldset {
     grid-template-rows: 1fr;
 }
 
+/* Disable this transition on mobile */
 @media only screen and (max-width: 800px)
 {
     .fade-wrapper {
@@ -243,13 +263,12 @@ fieldset {
     border: 0;
 }
 
+/* Column Flexbox */
 #about-body {
-    /* position: absolute; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* transition: opacity 0.2s ease, display 0.2s; */
     min-height: 0;
     opacity: 1;
 }
@@ -258,7 +277,7 @@ fieldset {
     display: flex;
 }
 
-
+/* Column Flexbox */
 #about-title {
     display: flex;
     flex-direction: column;
@@ -288,6 +307,7 @@ fieldset {
     padding: 28px 28px;
 }
 
+/* Remove the small nav on mobile */
 @media only screen and (max-width: 800px)
 {
     #about-body-nav {
@@ -321,7 +341,7 @@ fieldset {
     margin: 0% 3%;
 }
 
-
+/* Cutting up a sprite sheet using background image and position */
 #chess-scroll-animation-1-white-piece {
     position: relative;
     transform: translateX(-50px);
@@ -349,19 +369,22 @@ fieldset {
     display: flex;
 }
 
-#chess-introduction p {
+#chess-introduction h4 {
     font-size: 120%;
     max-width: 500px;
     margin: 0% 5%;
 }
 
+/* For animation of chess pieces */
 .active.tilt-right {
-    rotate: 5deg;
+    transform: rotate(5deg);
 }
 
 .active.tilt-left {
-    rotate: -5deg;
+    transform: rotate(-5deg);
 }
+
+/* Disable white piece on mobile */
 
 @media only screen and (max-width: 800px)
 {
@@ -391,7 +414,7 @@ fieldset {
     margin: 0% 3%;
 }
 
-#chess-media-introduction p {
+#chess-media-introduction h4 {
     font-size: 120%;
     max-width: 50%;
     margin: 0% 5%;
@@ -403,6 +426,7 @@ fieldset {
     border-radius: 15px;
 }
 
+/* Change layout to column in mobile */
 @media only screen and (max-width: 800px)
 {
     #chess-media-introduction {
@@ -416,7 +440,7 @@ fieldset {
         margin: 0% 5%;
     }
 
-    #chess-media-introduction p {
+    #chess-media-introduction h4 {
         font-size: 120%;
         max-width: 100%;
     }
@@ -442,7 +466,7 @@ fieldset {
     margin: 0% 3%;
 }
 
-#chess-why-introduction p {
+#chess-why-introduction h4 {
     font-size: 120%;
     max-width: 50%;
     margin: 0% 5%;
@@ -462,14 +486,15 @@ fieldset {
     justify-content: center;
 }
 
-#return-to-top {
+.return-to-top {
     fill: var(--nord2);
     transition: 0.5s ease;
 }
 
+/* Remove hover in mobile */
 @media only screen and (min-width: 801px)
 {
-    #return-to-top:hover {
+    .return-to-top:hover {
         transform: translateY(-10px);
     }
 }
@@ -515,6 +540,7 @@ fieldset {
 
 /* #region Reveal elements on scroll */
 
+/* Only in desktop */
 @media only screen and (min-width: 801px)
 {
     .reveal-on-scroll {
@@ -547,7 +573,7 @@ fieldset {
     height: 0;
 }
 
-
+/* Only in mobile show video, else show chessboard */
 @media only screen and (max-width: 800px)
 {
     .piece-video {
@@ -578,6 +604,7 @@ fieldset {
     font-size: 450%;
 }
 
+/* Selection of pieces flexbox */
 #piece-select {
     display: flex;
     flex-direction: row;
@@ -596,7 +623,7 @@ fieldset {
     padding: 23px 00px;
 }
 
-
+/* Selectors */
 #cycle-left-piece {
     transform: rotate(-90deg);
     width: 120px;
@@ -640,6 +667,7 @@ fieldset {
     border: 0;
 }
 
+/* Design of chessboard */
 .chess-board-indicator.active {
     display: inline;
 }
@@ -671,8 +699,6 @@ fieldset {
 }
 
 .chess-board td { 
-    /* width: 2vw;
-    height: 2vw;  */
     width: 1.5em;
     height: 1.5em;
     text-align: center;
@@ -680,6 +706,7 @@ fieldset {
     line-height: 0;
 }
 
+/* Alternating colours */
 .chess-board .light { 
     background: var(--nord8); 
 }
@@ -687,6 +714,7 @@ fieldset {
     background: var(--nord2); 
 }
 
+/* Default piece class */
 .chess-board-piece {
     margin: auto;
     background-color: transparent;
@@ -695,7 +723,7 @@ fieldset {
     stroke: var(--foreground);
 }
 
-/* TODO - Add comma */
+/* Separated out because I don't want one long line */
 .selected svg path[style] {
     stroke: var(--red) !important;
 }
@@ -749,7 +777,7 @@ fieldset {
     margin: 0% 3%;
 }
 
-#chess-origins p {
+#chess-origins h4 {
     font-size: 120%;
     max-width: 50%;
 }
@@ -778,7 +806,7 @@ fieldset {
     margin: 0% 3%;
 }
 
-#chess-origins-2 p {
+#chess-origins-2 h4 {
     font-size: 120%;
     max-width: 50%;
 }
@@ -789,6 +817,7 @@ fieldset {
     border-radius: 15px;
 }
 
+/* Change to column layout in mobile */
 @media only screen and (max-width: 800px) {
     #chess-origins {
         min-width: 50%;
@@ -802,7 +831,7 @@ fieldset {
         flex-direction: column-reverse;
     }
 
-    #chess-origins p {
+    #chess-origins h4 {
         font-size: 120%;
         max-width: 100%;
     }
@@ -816,7 +845,7 @@ fieldset {
         flex-direction: column-reverse;
     }
 
-    #chess-origins-2 p {
+    #chess-origins-2 h4 {
         font-size: 120%;
         max-width: 100%;
     }
@@ -886,6 +915,7 @@ fieldset {
     border-radius: 15px;
 }
 
+/* Change to column layout in mobile */
 @media only screen and (max-width: 800px)
 {
     .opening div {
@@ -904,7 +934,7 @@ fieldset {
 
 }
 
-
+/* Quiz flexbox */
 #quiz-section {
     display: flex;
     justify-content: center;
@@ -938,6 +968,7 @@ fieldset {
     margin-top: 50px;
 }
 
+/* Make the buttons bigger so that the mobile user can press it easier */
 @media only screen and (max-width: 800px)
 {
     #quiz-section input {
