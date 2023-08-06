@@ -21,6 +21,7 @@
 
 section {
     min-height: 100vh;
+    min-width: none;
 }
 
 /* Setting default background colour and foreground colour and setting default font to inconsolata */
@@ -497,6 +498,7 @@ fieldset {
     align-items: center;
     min-height: 0;
     opacity: 1;
+    min-width: auto;
 }
 
 .piece-video {
@@ -508,8 +510,9 @@ fieldset {
 {
     .piece-video {
         display: block;
-        height: 30vh;
-        width: 40vh;
+        height: 50vh;
+        width: 70vw;
+        min-width: 50vw;
         border-radius: 5%;
     }
 
@@ -536,25 +539,32 @@ fieldset {
 #piece-select {
     display: flex;
     flex-direction: row;
+    flex-basis: auto;
+    gap: 60px;
 }
 
 #piece-select button {
+    display: flex;
     background-color: transparent;
     border: 0px;
 }
 
 .chess-piece {
     transform: scale(3, 3);
-    padding: 70px 0px;
+    padding: 23px 00px;
 }
 
 
 #cycle-left-piece {
-    transform: scale(0.6, 0.6) rotate(-90deg);
+    transform: rotate(-90deg);
+    width: 120px;
+    height: 100px;
 }
 
 #cycle-right-piece {
-    transform: scale(0.6, 0.6) rotate(90deg);
+    transform: rotate(90deg);
+    width: 120px;
+    height: 100px;
 }
 
 #piece-section p {
