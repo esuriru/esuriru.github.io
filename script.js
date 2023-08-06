@@ -5,13 +5,13 @@ const mediaQuery = window.matchMedia('(max-width: 800px)');
 
 function FixResponsive(e)
 {
-    const secondItem = document.getElementById("chess-origins-2");
     if (e.matches)
     {
         const wrapper = document.querySelector(".fade-wrapper.active");
         if (wrapper == null) return;
         const body = wrapper.children[0];
         body.classList.add("active");
+        SelectVideo();
     }
     else
     {
@@ -25,6 +25,15 @@ mediaQuery.addListener(FixResponsive);
 const pieces = Array.from(document.querySelectorAll(".chess-piece"));
 var currentSelectedPiece = 0;
 const pieceNames = [ "King", "Queen", "Rook", "Bishop", "Knight", "Pawn" ];
+const pieceVideos = 
+[
+    document.getElementById("king-video"),
+    document.getElementById("queen-video"),
+    document.getElementById("rook-video"),
+    document.getElementById("bishop-video"),
+    document.getElementById("knight-video"),
+    document.getElementById("pawn-video"),
+]
 const pieceDescriptions = 
 [ 
     "The king can only move 1 step in all directions.",
@@ -97,6 +106,14 @@ function OnHamburgerMenuClick()
     hamburgerNavMenu.classList.toggle("open");
 }
 
+function SelectVideo()
+{
+    for (let i = 0; i < pieceVideos.length; ++i)
+    {
+        pieceVideos[i].style.display = i == currentSelectedPiece ? "block" : "none";
+    }
+}
+
 function ResetPositions()
 {
     document.querySelectorAll(".chess-board-indicator.active").forEach(i => i.classList.remove("active"));
@@ -151,6 +168,7 @@ function UpdateChessBoardOnSelect(reset = true)
         ResetPositions();
     }
 
+    SelectVideo();
     var pieceElements = [];
     for (let i = 0; i < pieceElementClassNames.length; ++i)
     {
@@ -796,14 +814,8 @@ function GetResults()
 
 window.addEventListener("scroll", Reveal);
 Reveal();
+UpdateChessBoardOnSelect();
 
-window.onload = function()
-{
-    UpdateChessBoardOnSelect();
-    // const historyPage = document.querySelector("#history-page").parentElement;
-    // historyPage.classList.remove("active");
-    // about.style.maxHeight = '0vh';
-}
 
 
 

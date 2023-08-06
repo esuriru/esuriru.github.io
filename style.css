@@ -491,16 +491,6 @@ fieldset {
 
 /* #region Rules page */
 #rules-body {
-    /* position: absolute; */
-    /* margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 200ms ease, display 200ms; 
-    max-width: 1024px;
-    opacity: 1; */
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -508,6 +498,26 @@ fieldset {
     min-height: 0;
     opacity: 1;
 }
+
+.piece-video {
+    height: 0;
+}
+
+
+@media only screen and (max-width: 800px)
+{
+    .piece-video {
+        display: block;
+        height: 30vh;
+        width: 40vh;
+        border-radius: 5%;
+    }
+
+    .chess-board {
+        display: none;
+    }
+}
+
 
 #rules-body.active {
     display: flex;
@@ -523,10 +533,6 @@ fieldset {
     font-size: 450%;
 }
 
-#piece-section p {
-    
-}
-
 #piece-select {
     display: flex;
     flex-direction: row;
@@ -539,7 +545,7 @@ fieldset {
 
 .chess-piece {
     transform: scale(3, 3);
-    padding: 70px 30px;
+    padding: 70px 0px;
 }
 
 
@@ -562,8 +568,11 @@ fieldset {
 }
 
 #basic-piece-movement-header {
+    max-width: 90vw;
     font-size: 300%;
     margin-bottom: 0;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 /* #endregion */
@@ -610,6 +619,8 @@ fieldset {
 }
 
 .chess-board td { 
+    /* width: 2vw;
+    height: 2vw;  */
     width: 1.5em;
     height: 1.5em;
     text-align: center;
