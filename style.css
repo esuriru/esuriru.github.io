@@ -123,11 +123,18 @@ fieldset {
     margin-bottom: 25px;
 }
 
+@media only screen and (min-width: 801px)
+{
+    #top-header .text-button:hover {
+        font-weight: 500;
+    }
+}
+
+
 @media only screen and (max-width: 800px)
 {
     #top-header .text-button {
         display: none;
-
     }
 
     #hamburger-menu {
@@ -157,10 +164,6 @@ fieldset {
     background-color: transparent;
     border: none;
     color: var(--nord8);
-}
-
-#top-header .text-button:hover {
-    font-weight: 500;
 }
 
 #chess-logo-div {
@@ -293,6 +296,7 @@ fieldset {
 }
 
 
+/* Does not need to be in the media query because display is none if query is met. */
 #about-body-nav div:hover > .bold-spaced-out {
     letter-spacing: 3px; 
 }
@@ -463,8 +467,11 @@ fieldset {
     transition: 0.5s ease;
 }
 
-#return-to-top:hover {
-    transform: translateY(-10px);
+@media only screen and (min-width: 801px)
+{
+    #return-to-top:hover {
+        transform: translateY(-10px);
+    }
 }
 
 /* #endregion */
