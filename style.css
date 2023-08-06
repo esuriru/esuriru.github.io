@@ -255,17 +255,6 @@ fieldset {
     display: flex;
 }
 
-@media only screen and (max-width: 800px)
-{
-    /* #about-body {
-        display: none;
-    }
-
-    #about-body.active {
-        display: flex;
-    } */
-}
-
 
 #about-title {
     display: flex;
@@ -296,6 +285,14 @@ fieldset {
     padding: 28px 28px;
 }
 
+@media only screen and (max-width: 800px)
+{
+    #about-body-nav {
+        display: none;
+    }
+}
+
+
 #about-body-nav div:hover > .bold-spaced-out {
     letter-spacing: 3px; 
 }
@@ -319,6 +316,7 @@ fieldset {
     align-items: center;
     margin: 0% 3%;
 }
+
 
 #chess-scroll-animation-1-white-piece {
     position: relative;
@@ -350,6 +348,7 @@ fieldset {
 #chess-introduction p {
     font-size: 120%;
     max-width: 500px;
+    margin: 0% 5%;
 }
 
 .active.tilt-right {
@@ -358,6 +357,21 @@ fieldset {
 
 .active.tilt-left {
     rotate: -5deg;
+}
+
+@media only screen and (max-width: 800px)
+{
+    #chess-introduction div {
+        margin: 0;
+    }
+
+    #chess-scroll-animation-1-white-piece {
+        height: 0;
+        width: 0;
+    }
+    #chess-scroll-animation-1-black-piece {
+        margin: 0;
+    }
 }
 
 /* #endregion */
@@ -376,12 +390,32 @@ fieldset {
 #chess-media-introduction p {
     font-size: 120%;
     max-width: 50%;
+    margin: 0% 5%;
 }
 
 #chess-media-introduction img {
     max-width: 50%;
     min-width: 10%;
     border-radius: 15px;
+}
+
+@media only screen and (max-width: 800px)
+{
+    #chess-media-introduction {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #chess-media-introduction img {
+        border-radius: 15px;
+        max-width: 90%;
+        margin: 0% 5%;
+    }
+
+    #chess-media-introduction p {
+        font-size: 120%;
+        max-width: 100%;
+    }
 }
 
 /* #endregion */
@@ -407,6 +441,7 @@ fieldset {
 #chess-why-introduction p {
     font-size: 120%;
     max-width: 50%;
+    margin: 0% 5%;
 }
 
 #chess-why-introduction img {
@@ -748,10 +783,6 @@ fieldset {
 }
 
 @media only screen and (max-width: 800px) {
-    #history-page {
-        flex-direction: row;
-    }
-
     #chess-origins {
         min-width: 50%;
     }
@@ -848,6 +879,25 @@ fieldset {
     border-radius: 15px;
 }
 
+@media only screen and (max-width: 800px)
+{
+    .opening div {
+        flex-direction: column;
+    }
+
+    .opening p {
+        max-width: 100%;
+    }
+
+    .opening img {
+        max-width: 90%;
+        border-radius: 15px;
+        margin-bottom: 50px;
+    }
+
+}
+
+
 #quiz-section {
     display: flex;
     justify-content: center;
@@ -857,6 +907,7 @@ fieldset {
 
 #quiz-section h1 {
     font-size: 300%;
+    margin: 0% 5%;
 }
 
 #quiz-section img {
