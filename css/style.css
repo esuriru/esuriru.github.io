@@ -285,24 +285,29 @@ header p {
     color: var(--cyan)
 }
 
+.align-items a {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+
 .date-list-item {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .date-title {
-    display: inline-block;
-    margin: auto;
+    flex: 1;
     color: var(--foreground);
-    text-align: left;
+    text-align: right;
 }
 
 .project-title {
-    display: inline-block;
-    margin: auto;
-    text-align: right;
+    flex: 1;
     color: var(--blue);
-    padding-left: 10px;
+    text-align: left;
 }
 
 .page-image {
