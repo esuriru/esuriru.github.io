@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <title>Cortus</title>
+    </head>
+    <body>
+        <div class="home-icon">
+            <a href="index.html">
+                <svg style="color: white" width="32" height="28" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" fill="white"></path> <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" fill="white"></path>
+                </svg>
+            </a>
+        </div>
+        <header>
+            <p>
+                <a href="index.html">
+                    Christian
+                </a>
+            </p>
+        </header>
+
+        <video class="page-image" title="Cortus trailer" autoplay muted>
+            <source src="video/Trailer_2.mp4" type="video/mp4">
+            Trailer not supported
+        </video>
+        <h2>Cortus</h2>
+        <p>
+        <a href="https://cortus.itch.io/cortus"> Cortus</a> is a 2D game developed for Windows and Android in <strong>Unity</strong>, that was created in a week for the 2023 NYP x H2 Games Game Jam which won the award of <strong class="cyan">most popular game</strong>.
+        <br><br>
+            With a team of 3 programmers and 2 artists,
+            I was the <strong class="cyan">lead programmer</strong> and <strong class="red">project manager</strong>. Cortus is a unique
+            endless runner where the player has to control the <span class="green">environment </span>instead of the player.
+        </p>
+
+        <h2>
+            Story
+        </h2>
+        <p>
+            The <span class="blue">Lotus Knight</span> has taken control over the Dragon kingdom. His roots extend throughout the kingdom, swallowing everything. Lotuses bloom all around. The dragon people have become his puppets, but <span class="red">Sir Dragonlot</span> refuses to yield. <strong>Will he be able to defeat the Lotus Knight?</strong>
+        </p>
+
+        <h2>
+            Impacts
+        </h2>
+        <h3>
+            Programming
+        </h3>
+        <br>
+        <img class="page-image" src="images/cortus_gameplay.jpg" title="Cortus screenshot of in-game">
+        <p>
+            I worked on the entire gameplay loop with the endless levels. The other programmers in my team
+            worked on audio, input and player health, but I had to integrate those myself. I also found myself
+            needing to work on their stuff because it did not work properly like the mobile swiping.
+            <br><br>
+            This was my first time developing a build, not only for Windows, but for a game. Hence, I learnt
+            alot about developing for release and learnt a lot of tools to debug the build like Android Logcat.
+            I learnt more modern Unity features like the new <span class="purple">Input System</span>.
+            <br><br>
+            I imported the sprites and created shaders for the sprites to add some nice post-processing effects.
+        </p>
+
+        <h3>
+            Design
+        </h3>
+        <p>
+            I worked on the level design of the game, I created all the levels using Unity's Tilemap editor and
+            made the player randomly progress through the levels. I also added the decoration which was provided by the artists.
+            <br><br>
+        <img class="page-image" src="images/cortus.png" title="Cortus main menu">
+            I also worked on the UI of the game, I did up the menu and made the starting transition and fixed UI bugs which
+            were left by the other programmers.
+        </p>
+
+        <h3>
+            Teamwork and Project Management
+        </h3>
+        <p>
+            I had to work with programmers that were <span class="red">not willing to partake</span> in the Game Jam (partly fault to NYP),
+            so I did my best to be pragmatic and stoic with whatever features I was able to come up with. 
+            I gave the other two programmers tasks of less priority and importance just in case they did not do them.
+            <br><br>
+            At first, we were aiming for complete random level generation, but that was not feasible in a week as found by 
+            day 3, seeing how we did not have much progress on the game. Hence, I took the executive decision to 
+            salvage whatever gameplay we had so we had something to submit.
+            <br><br>
+            Our means of communication online was through <span class="purple">Discord</span>. I communicated their tasks through <span class="cyan">Jira</span> which I managed and upheld throughout the game jam, and teaching them
+            along the way, since they were new to the technology. This was also my first time collaborating with artists, so we set up a channel for
+            the artists to share their finished work with us. 
+        </p>
+
+        <footer>
+            <!-- Github Icon -->
+            <div class="github-icon">
+                <a href="https://github.com/esuriru" title="Personal github page" class="github-button">
+                    <svg aria-hidden="true" class="octicon octicon-mark-github" height="36" version="1.1" viewBox="0 0 16 16" width="36">
+                        <path class="path" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                </a>
+                <div class="github-icon-text">GitHub</div>
+            </div>
+            <p class="fix-anchor-width">
+                <a class="hover-enlarge-text home-link" href="index.html">
+                    Home
+                </a>
+            </p>
+        </footer>
+    </body>
+</html>
